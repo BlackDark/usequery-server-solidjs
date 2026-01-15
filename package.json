@@ -37,7 +37,7 @@
     "ssr",
     "tanstack-query"
   ],
-  "author": "",
+  "author": "Eduard Marbach",
   "license": "MIT",
   "peerDependencies": {
     "solid-js": "^1.0.0"
