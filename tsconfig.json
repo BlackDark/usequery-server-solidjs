@@ -8,7 +8,7 @@
     "allowJs": true,
     "checkJs": false,
     "jsx": "preserve",
-    "jsxImportSource": "solid-js/h",
+    "jsxImportSource": "solid-js",
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
