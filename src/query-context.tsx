@@ -1,4 +1,4 @@
-import { createContext, useContext, type JSX } from "solid-js";
+import { createComponent, createContext, useContext, type JSX } from "solid-js";
 import type { QueryClient } from "./query-client.js";
 
 const QueryClientContext = createContext<QueryClient>();
@@ -12,9 +12,12 @@ export interface QueryProviderProps {
  * QueryProvider component that provides QueryClient to all children.
  */
 export function QueryProvider(props: QueryProviderProps): JSX.Element {
-  return (
-    <QueryClientContext.Provider value={props.client}>{props.children}</QueryClientContext.Provider>
-  );
+  return createComponent(QueryClientContext.Provider, {
+    value: props.client,
+    get children() {
+      return props.children;
+    },
+  });
 }
 
 /**

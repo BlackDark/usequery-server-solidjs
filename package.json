@@ -20,8 +20,8 @@
   "scripts": {
     "build": "bun run build:clean && bun run build:esm && bun run build:cjs && bun run build:types",
     "build:clean": "rm -rf dist",
-    "build:esm": "bun build src/index.ts --outdir dist --format esm --target node --minify --sourcemap",
-    "build:cjs": "bun build src/index.ts --outdir dist --format cjs --target node --minify --sourcemap --outfile dist/index.cjs",
+    "build:esm": "bun build src/index.ts --outdir dist --entry-naming index.mjs --format esm --target node --minify --sourcemap",
+    "build:cjs": "bun build src/index.ts --outdir dist --entry-naming index.cjs --format cjs --target node --minify --sourcemap",
     "build:types": "tsc --emitDeclarationOnly --declaration --declarationMap --outDir dist",
     "test": "bun test",
     "lint": "biome lint ./src ./tests",
