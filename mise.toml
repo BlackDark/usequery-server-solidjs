@@ -1,0 +1,6 @@
+[tools]
+bun = "1.4.4"
+
+[tasks.check]
+description = "Install, lint, typecheck, test, and build"
+run = "bun install --frozen-lockfile && bun run lint && bun run typecheck && bun test && bun run build"
